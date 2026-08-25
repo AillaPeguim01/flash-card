@@ -1,3 +1,4 @@
+
 * {
 box-sizing: border-box;
 margin: 0;
@@ -9,7 +10,7 @@ body {
   flex-direction: column; 
   min-height: 100vh; 
   background-color: #f5f2f2; 
-
+  font-family: "Poppins";
 } 
 
 h2 {
@@ -47,14 +48,20 @@ section {
   gap: 16px; 
 } 
 
-.cartao {
-width: 260px;
-height: 200px;
+.nome-site h1 {
+  font-family: "Abril Fatface";
+}
 
+.cartao {
+width: 300px;
+height: 240px;
+perspective: 1000px; /* dá profundidade ao efeito de virar */
 }
 
 .cartao-imagem {
-width: 100%;
+  width: 100%;
+  height: 140px; /* altura fixa pra imagem não definir o tamanho do card */
+  object-fit: cover;
 }
 
 .cabecalho-link { 
@@ -69,22 +76,36 @@ h1 {
 } 
 
 .cartao-interno { 
-  position: relative; 
-  transition: transform 0.8s; 
+ position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
   transform-style: preserve-3d; 
 } 
 
 .cartao-frente, .cartao-verso { 
-  position: absolute; 
-  border-radius: 12px; 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-  backface-visibility: hidden; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+  overflow: hidden; /* evita que a imagem "estoure" o card */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* opcional, pra cobrir o fundo */; 
 } 
 
 .cartao-verso { 
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg);
+  padding: 16px; /* já que não tem imagem, dá um respiro pro texto */
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
 } 
 
 .cartao:hover .cartao-interno { 
   transform: rotateY(180deg); 
-}
+} 
