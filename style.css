@@ -131,14 +131,17 @@ section {
 .cartao-verso { 
   transform: rotateY(180deg);
   padding: 20px 16px; 
-  justify-content: center;
   align-items: center;
   text-align: center; 
   background-color: #f487de; 
   color: #5d1a5d;
   font-size: 14px;
   line-height: 1.4;
-} 
+  
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
 
 /* Botões de Acertei/Errei */
 .botoes-resposta {
@@ -176,4 +179,19 @@ footer {
   color: #f5ffba; 
   text-align: center;
   margin-top: 30px;
+}
+
+.cartao-verso > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  margin: 0;
+}
+
+.botoes-resposta {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
 }
