@@ -131,7 +131,7 @@ section {
 .cartao-verso { 
   transform: rotateY(180deg);
   padding: 20px 16px; 
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center; 
   background-color: #f487de; 
