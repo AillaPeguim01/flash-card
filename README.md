@@ -27,7 +27,3 @@ O usuário deve clicar nos cartões para revelar as respostas. Também é possí
 * HTML
 * CSS
 * JavaScript
-
-## 👩‍🔬 Projeto
-
-Projeto desenvolvido com finalidade **educacional**, voltado ao estudo de Física e à utilização de tecnologias digitais como ferramenta de aprendizagem.
