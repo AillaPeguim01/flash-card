@@ -3,7 +3,7 @@
   <head> 
     <meta charset="UTF-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Óptica Flashcards</title>
   </head> 
   <body> 
@@ -15,24 +15,34 @@
     </header> 
 
     <main> 
-      <h2>Descubra a verdade passando o mouse</h2> 
-      
+      <h2>Clique no cartão para revelar a resposta</h2> 
+
+      <!-- Placar de Autoavaliação -->
+      <div class="placar">
+        <span>Acertos: <strong id="acertos">0</strong></span>
+        <span>Erros: <strong id="erros">0</strong></span>
+      </div>
+
       <section> 
         <!-- Card 1 -->
-        <article class="cartao"> 
+        <article class="cartao" onclick="virarCartao(this)"> 
           <div class="cartao-interno"> 
             <div class="cartao-frente"> 
-              <img src="/img/propretilinea.png" alt="Propriedades da luz" class="cartao-imagem"> 
+              <img src="img/propretilinea.png" alt="Propriedades da luz" class="cartao-imagem"> 
               <p>Quais são os três princípios fundamentais da óptica geométrica?</p> 
             </div> 
             <div class="cartao-verso"> 
               <p>Propagação retilínea, independência dos raios e reversibilidade dos raios.</p> 
+              <div class="botoes-resposta">
+                <button class="btn-erro" onclick="marcarResposta(event, false)">Errei ❌</button>
+                <button class="btn-acerto" onclick="marcarResposta(event, true)">Acertei 🎯</button>
+              </div>
             </div> 
           </div> 
         </article> 
 
         <!-- Card 2 -->
-        <article class="cartao"> 
+        <article class="cartao" onclick="virarCartao(this)"> 
           <div class="cartao-interno"> 
             <div class="cartao-frente"> 
               <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Reflexão" class="cartao-imagem"> 
@@ -40,71 +50,95 @@
             </div> 
             <div class="cartao-verso"> 
               <p>O ângulo de incidência é sempre igual ao ângulo de reflexão (i = r).</p> 
+              <div class="botoes-resposta">
+                <button class="btn-erro" onclick="marcarResposta(event, false)">Errei ❌</button>
+                <button class="btn-acerto" onclick="marcarResposta(event, true)">Acertei 🎯</button>
+              </div>
             </div> 
           </div> 
         </article> 
 
         <!-- Card 3 -->
-        <article class="cartao"> 
+        <article class="cartao" onclick="virarCartao(this)"> 
           <div class="cartao-interno"> 
             <div class="cartao-frente"> 
-              <img src="/img/propretilinea.png" alt="Propriedade" class="cartao-imagem"> 
+              <img src="img/propretilinea.png" alt="Propriedade" class="cartao-imagem"> 
               <p>Qual é a propriedade da luz descrita na imagem?</p> 
             </div> 
             <div class="cartao-verso"> 
-              <p>Propagação retilínea: a luz se propaga em linha reta em meios homogêneos, formando sombras nítidas.</p> 
+              <p>Propagação retilínea: a luz se propaga em linha reta em meios homogêneos.</p> 
+              <div class="botoes-resposta">
+                <button class="btn-erro" onclick="marcarResposta(event, false)">Errei ❌</button>
+                <button class="btn-acerto" onclick="marcarResposta(event, true)">Acertei 🎯</button>
+              </div>
             </div> 
           </div> 
         </article> 
 
         <!-- Card 4 -->
-        <article class="cartao"> 
+        <article class="cartao" onclick="virarCartao(this)"> 
           <div class="cartao-interno"> 
             <div class="cartao-frente"> 
-              <img src="/img/propretilinea.png" alt="Espelhos" class="cartao-imagem"> 
+              <img src="img/propretilinea.png" alt="Espelhos" class="cartao-imagem"> 
               <p>Qual a diferença de imagem entre espelho convexo e côncavo?</p> 
             </div> 
             <div class="cartao-verso"> 
-              <p>Convexo gera imagem menor e virtual. Côncavo varia com a distância (maior, menor, real ou virtual).</p> 
+              <p>Convexo gera imagem menor e virtual. Côncavo varia com a distância.</p> 
+              <div class="botoes-resposta">
+                <button class="btn-erro" onclick="marcarResposta(event, false)">Errei ❌</button>
+                <button class="btn-acerto" onclick="marcarResposta(event, true)">Acertei 🎯</button>
+              </div>
             </div> 
           </div> 
         </article> 
 
         <!-- Card 5 -->
-        <article class="cartao"> 
+        <article class="cartao" onclick="virarCartao(this)"> 
           <div class="cartao-interno"> 
             <div class="cartao-frente"> 
-              <img src="/img/propretilinea.png" alt="Refraçao" class="cartao-imagem"> 
+              <img src="img/propretilinea.png" alt="Refração" class="cartao-imagem"> 
               <p>O que é refração da luz?</p> 
             </div> 
             <div class="cartao-verso"> 
               <p>É a mudança de velocidade e direção da luz ao passar de um meio para outro.</p> 
+              <div class="botoes-resposta">
+                <button class="btn-erro" onclick="marcarResposta(event, false)">Errei ❌</button>
+                <button class="btn-acerto" onclick="marcarResposta(event, true)">Acertei 🎯</button>
+              </div>
             </div> 
           </div> 
         </article> 
 
         <!-- Card 6 -->
-        <article class="cartao"> 
+        <article class="cartao" onclick="virarCartao(this)"> 
           <div class="cartao-interno"> 
             <div class="cartao-frente"> 
-              <img src="/img/propretilinea.png" alt="Lentes" class="cartao-imagem"> 
+              <img src="img/propretilinea.png" alt="Lentes" class="cartao-imagem"> 
               <p>Qual a diferença entre lente convergente e divergente?</p> 
             </div> 
             <div class="cartao-verso"> 
-              <p>Convergente junta os raios de luz (hipermetropia); divergente espalha os raios (miopia).</p> 
+              <p>Convergente junta os raios de luz; divergente espalha os raios.</p> 
+              <div class="botoes-resposta">
+                <button class="btn-erro" onclick="marcarResposta(event, false)">Errei ❌</button>
+                <button class="btn-acerto" onclick="marcarResposta(event, true)">Acertei 🎯</button>
+              </div>
             </div> 
           </div> 
         </article> 
 
         <!-- Card 7 -->
-        <article class="cartao"> 
+        <article class="cartao" onclick="virarCartao(this)"> 
           <div class="cartao-interno"> 
             <div class="cartao-frente"> 
-              <img src="/img/propretilinea.png" alt="Olho humano" class="cartao-imagem"> 
+              <img src="img/propretilinea.png" alt="Olho humano" class="cartao-imagem"> 
               <p>O que é miopia e qual lente a corrige?</p> 
             </div> 
             <div class="cartao-verso"> 
               <p>Imagem formada antes da retina; corrigida com lente divergente.</p> 
+              <div class="botoes-resposta">
+                <button class="btn-erro" onclick="marcarResposta(event, false)">Errei ❌</button>
+                <button class="btn-acerto" onclick="marcarResposta(event, true)">Acertei 🎯</button>
+              </div>
             </div> 
           </div> 
         </article> 
@@ -114,5 +148,7 @@
     <footer> 
       <p>Projeto feito por Anônimo</p> 
     </footer> 
+
+    <script src="script.js"></script>
   </body> 
 </html>

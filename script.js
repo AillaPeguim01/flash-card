@@ -1,44 +1,25 @@
-criaCartao(
-    'História',
-    'Em que ano a Segunda Guerra Mundial começou??',
-    'No ano de 1939'
-)
+let totalAcertos = 0;
+let totalErros = 0;
 
-criaCartao(
-    'Português',
-    'Quem escreveu Dom Casmurro??',
-    'Foi o Machado de Assis'
-)
+// Função responsável por virar e desvirar o cartão no clique
+function virarCartao(cartaoElemento) {
+  cartaoElemento.classList.toggle('virado');
+}
 
-criaCartao(
-    'Geografia',
-    'Qual a capital da França?',
-    'Paris'
-)
+// Função para contabilizar os pontos no placar
+function marcarResposta(event, acertou) {
+  // Impede que o clique no botão desvire o cartão ao mesmo tempo
+  event.stopPropagation();
 
-criaCartao(
-    'Quimica',
-    'Atualemte, quantos elementos químicos a tabela peroódica possui?',
-    '118 Elementos'
-)
+  if (acertou) {
+    totalAcertos++;
+    document.getElementById('acertos').textContent = totalAcertos;
+  } else {
+    totalErros++;
+    document.getElementById('erros').textContent = totalErros;
+  }
 
-
-function criaCartao(categoria, pergunta, resposta) {
-    let container = document.getElementById('container')
-    let cartao = document.createElement('article')
-    cartao.className = 'cartao'
-
-    cartao.innerHTML = `
-    <div class="cartao__conteudo">
-    <h3>${categoria}</h3>
-    <div class="cartao__conteudo__pergunta">
-        <p>${pergunta}</p>
-    </div>
-    <div class="cartao__conteudo__resposta">
-        <p>${resposta}</p>
-    </div>
-    </div>
-    `
-    container.appendChild(cartao)
-
+  // Desvira o cartão após clicar no botão de resposta
+  const cartao = event.target.closest('.cartao');
+  cartao.classList.remove('virado');
 }
