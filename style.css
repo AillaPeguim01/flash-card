@@ -8,12 +8,12 @@ body {
   display: flex; 
   flex-direction: column; 
   min-height: 100vh; 
-  background-color: #f5f2f2; 
+  background-color: #f7ffbe; 
   font-family: "Poppins", sans-serif;
 } 
 
 .cabecalho { 
-  background-color: #3c7cf3;
+  background-color: #cb2bc6;
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
@@ -21,12 +21,12 @@ body {
 } 
 
 h1 { 
-  color: #fff; 
+  color: #f7ffbe; 
   font-size: 24px; 
 } 
 
 .cabecalho-link { 
-  color: #fff; 
+  color: #f7ffbe; 
   text-decoration: none; 
   font-weight: bold;
 } 
@@ -42,7 +42,7 @@ main {
 h2 {
   font-size: 20px;
   margin-bottom: 24px;
-  color: #333;
+  color: #1e1b1b;
 }
 
 section { 
@@ -84,7 +84,7 @@ section {
   overflow: hidden; 
   display: flex;
   flex-direction: column;
-  background-color: #fff; 
+  background-color: #f7ffbe; 
 } 
 
 .cartao-frente {
@@ -112,15 +112,15 @@ section {
   align-items: center;
   text-align: center; 
   background-color: #eef4ff; /* Cor leve para destacar o verso */
-  color: #1a365d;
+  color: #441752;
   font-size: 15px;
   line-height: 1.4;
 } 
 
 footer { 
-  background-color: #3c7cf3; 
+  background-color: #561b5a; 
   padding: 15px 25px; 
-  color: #fff; 
+  color: #f7ffbe; 
   text-align: center;
   margin-top: 30px;
 }
