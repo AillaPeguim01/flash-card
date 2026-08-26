@@ -116,7 +116,7 @@ section {
 .cartao-imagem {
   width: 100%;
   height: 150px; 
-  object-fit: contain; /* Exibe a imagem completa sem cortar */
+  object-fit: contain; /* Exibe a imagem completa */
 }
 
 .cartao-frente p {
@@ -124,7 +124,7 @@ section {
   font-size: 14px;
   font-weight: 500;
   color: #222;
-  margin-top: auto; /* Empurra o texto da pergunta para a parte inferior */
+  margin-top: auto; /* Texto da pergunta para a parte inferior */
 }
 
 /* Verso do Cartão */
@@ -166,11 +166,11 @@ section {
 }
 
 .btn-acerto {
-  background-color: #2ecc71;
+  background-color: #004d20;
 }
 
 .btn-erro {
-  background-color: #e74c3c;
+  background-color: #ae0101;
 }
 
 footer { 
