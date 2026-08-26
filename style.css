@@ -8,12 +8,12 @@ body {
   display: flex; 
   flex-direction: column; 
   min-height: 100vh; 
-  background-color: #f7ffbe; 
+  background-color: #f5f2f2; 
   font-family: "Poppins", sans-serif;
 } 
 
 .cabecalho { 
-  background-color: #cb2bc6;
+  background-color: #3c7cf3;
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
@@ -21,12 +21,12 @@ body {
 } 
 
 h1 { 
-  color: #f7ffbe; 
+  color: #fff; 
   font-size: 24px; 
 } 
 
 .cabecalho-link { 
-  color: #f7ffbe; 
+  color: #fff; 
   text-decoration: none; 
   font-weight: bold;
 } 
@@ -41,22 +41,39 @@ main {
 
 h2 {
   font-size: 20px;
-  margin-bottom: 24px;
-  color: #1e1b1b;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Placar de Pontuação */
+.placar {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.placar strong {
+  color: #3c7cf3;
 }
 
 section { 
   display: flex; 
-  flex-wrap: wrap; /* Faz os cartões quebrarem para a linha de baixo */
+  flex-wrap: wrap; 
   justify-content: center;
   gap: 20px; 
   max-width: 1200px;
 } 
 
+/* Dimensões do Cartão */
 .cartao {
   width: 280px;
-  height: 250px;
-  perspective: 1000px; /* Dá profundidade ao giro 3D */
+  height: 300px; /* Aumentado para dar mais espaço à foto e ao texto */
+  perspective: 1000px; 
   cursor: pointer;
 }
 
@@ -68,7 +85,8 @@ section {
   transform-style: preserve-3d; 
 } 
 
-.cartao:hover .cartao-interno { 
+/* Classe ativada via JS ao clicar no cartão */
+.cartao.virado .cartao-interno { 
   transform: rotateY(180deg); 
 } 
 
@@ -80,47 +98,83 @@ section {
   height: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  backface-visibility: hidden; /* Esconde o lado oposto ao girar */
+  backface-visibility: hidden; 
   overflow: hidden; 
   display: flex;
   flex-direction: column;
-  background-color: #f7ffbe; 
+  background-color: #fff; 
 } 
 
+/* Frente do Cartão */
 .cartao-frente {
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-}
-
-.cartao-frente p {
-  padding: 12px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #222;
+  padding-bottom: 15px;
 }
 
 .cartao-imagem {
   width: 100%;
-  height: 130px; 
-  object-fit: cover;
+  height: 150px; 
+  object-fit: contain; /* Exibe a imagem completa sem cortar */
+  background-color: #eaeaea; /* Fundo suave caso a imagem não preencha a largura toda */
 }
 
+.cartao-frente p {
+  padding: 10px 12px 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  margin-top: auto; /* Empurra o texto da pergunta para a parte inferior */
+}
+
+/* Verso do Cartão */
 .cartao-verso { 
   transform: rotateY(180deg);
-  padding: 20px; 
-  justify-content: center;
+  padding: 20px 16px; 
+  justify-content: space-between;
   align-items: center;
   text-align: center; 
-  background-color: #eef4ff; /* Cor leve para destacar o verso */
-  color: #441752;
-  font-size: 15px;
+  background-color: #eef4ff; 
+  color: #1a365d;
+  font-size: 14px;
   line-height: 1.4;
 } 
 
+/* Botões de Acertei/Errei */
+.botoes-resposta {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.botoes-resposta button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: opacity 0.2s;
+}
+
+.botoes-resposta button:hover {
+  opacity: 0.85;
+}
+
+.btn-acerto {
+  background-color: #2ecc71;
+}
+
+.btn-erro {
+  background-color: #e74c3c;
+}
+
 footer { 
-  background-color: #cb2bc6; 
+  background-color: #3c7cf3; 
   padding: 15px 25px; 
-  color: #f7ffbe; 
+  color: #fff; 
   text-align: center;
   margin-top: 30px;
 }
