@@ -1,86 +1,75 @@
-
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body { 
-    display: flex; 
+  display: flex; 
   flex-direction: column; 
   min-height: 100vh; 
   background-color: #f5f2f2; 
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 } 
-
-h2 {
-  font-size: 20px;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-footer { 
-  background-color: #3c7cf3; 
-  padding: 15px 25px; 
-  color: #fff; 
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between; 
-  align-items: center; 
-}
 
 .cabecalho { 
-background-color: #3c7cf3;
+  background-color: #3c7cf3;
   display: flex; 
   justify-content: space-between; 
-  flex-direction: column;
   align-items: center; 
   padding: 15px 25px; 
-} 
-
-section { 
-  display: flex; 
-  gap: 16px; 
-} 
-
-.nome-site h1 {
-  font-family: "Abril Fatface";
-}
-
-.cartao {
-width: 300px;
-height: 240px;
-perspective: 1000px; /* dá profundidade ao efeito de virar */
-}
-
-.cartao-imagem {
-  width: 100%;
-  height: 140px; /* altura fixa pra imagem não definir o tamanho do card */
-  object-fit: cover;
-}
-
-.cabecalho-link { 
-  color: #fff; 
-  text-decoration: none; 
 } 
 
 h1 { 
   color: #fff; 
   font-size: 24px; 
-  align-self: center;
 } 
 
+.cabecalho-link { 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: bold;
+} 
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+section { 
+  display: flex; 
+  flex-wrap: wrap; /* Faz os cartões quebrarem para a linha de baixo */
+  justify-content: center;
+  gap: 20px; 
+  max-width: 1200px;
+} 
+
+.cartao {
+  width: 280px;
+  height: 250px;
+  perspective: 1000px; /* Dá profundidade ao giro 3D */
+  cursor: pointer;
+}
+
 .cartao-interno { 
- position: relative;
+  position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
+  transition: transform 0.6s;
   transform-style: preserve-3d; 
+} 
+
+.cartao:hover .cartao-interno { 
+  transform: rotateY(180deg); 
 } 
 
 .cartao-frente, .cartao-verso { 
@@ -90,22 +79,48 @@ h1 {
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  backface-visibility: hidden;
-  overflow: hidden; /* evita que a imagem "estoure" o card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden; /* Esconde o lado oposto ao girar */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
-  background-color: #fff; /* opcional, pra cobrir o fundo */; 
+  background-color: #fff; 
 } 
+
+.cartao-frente {
+  align-items: center;
+  text-align: center;
+}
+
+.cartao-frente p {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+}
+
+.cartao-imagem {
+  width: 100%;
+  height: 130px; 
+  object-fit: cover;
+}
 
 .cartao-verso { 
   transform: rotateY(180deg);
-  padding: 16px; /* já que não tem imagem, dá um respiro pro texto */
+  padding: 20px; 
   justify-content: center;
   align-items: center;
   text-align: center; 
+  background-color: #eef4ff; /* Cor leve para destacar o verso */
+  color: #1a365d;
+  font-size: 15px;
+  line-height: 1.4;
 } 
 
-.cartao:hover .cartao-interno { 
-  transform: rotateY(180deg); 
-} 
+footer { 
+  background-color: #3c7cf3; 
+  padding: 15px 25px; 
+  color: #fff; 
+  text-align: center;
+  margin-top: 30px;
+}
