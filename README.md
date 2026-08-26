@@ -1,9 +1,9 @@
 # flash-card
-# 🔭 Óptica Flash Cards
+# Óptica Flash Cards
 
 Site educativo desenvolvido para auxiliar no estudo de **Óptica**, utilizando flashcards interativos para revisar conceitos de forma rápida e dinâmica.
 
-## 📚 Conteúdos
+## Conteúdos
 
 O site aborda os seguintes temas:
 
@@ -14,15 +14,15 @@ O site aborda os seguintes temas:
 5. **Lentes**
 6. **Óptica do corpo humano**
 
-## 🎯 Objetivo
+## Objetivo
 
 Facilitar a revisão dos principais conceitos de Óptica por meio de perguntas e respostas curtas, tornando o estudo mais interativo e organizado.
 
-## 💡 Como funciona
+## Como funciona
 
 O usuário deve clicar nos cartões para revelar as respostas. Também é possível marcar se a resposta foi **acertada ou errada**, permitindo acompanhar o desempenho durante a revisão.
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 * HTML
 * CSS
