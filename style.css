@@ -8,12 +8,12 @@ body {
   display: flex; 
   flex-direction: column; 
   min-height: 100vh; 
-  background-color: #f5f2f2; 
+  background-color: #f5ffba; 
   font-family: "Poppins", sans-serif;
 } 
 
 .cabecalho { 
-  background-color: #3c7cf3;
+  background-color: #ba33ad;
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
@@ -21,12 +21,12 @@ body {
 } 
 
 h1 { 
-  color: #fff; 
+  color: #f5ffba; 
   font-size: 24px; 
 } 
 
 .cabecalho-link { 
-  color: #fff; 
+  color: #f5ffba; 
   text-decoration: none; 
   font-weight: bold;
 } 
@@ -47,7 +47,7 @@ h2 {
 
 /* Placar de Pontuação */
 .placar {
-  background-color: #fff;
+  background-color: #f5ffba;
   padding: 10px 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -58,7 +58,7 @@ h2 {
 }
 
 .placar strong {
-  color: #3c7cf3;
+  color: #f845e6;
 }
 
 section { 
@@ -102,7 +102,7 @@ section {
   overflow: hidden; 
   display: flex;
   flex-direction: column;
-  background-color: #fff; 
+  background-color: #f5ffba; 
 } 
 
 /* Frente do Cartão */
@@ -117,7 +117,6 @@ section {
   width: 100%;
   height: 150px; 
   object-fit: contain; /* Exibe a imagem completa sem cortar */
-  background-color: #eaeaea; /* Fundo suave caso a imagem não preencha a largura toda */
 }
 
 .cartao-frente p {
@@ -135,8 +134,8 @@ section {
   justify-content: space-between;
   align-items: center;
   text-align: center; 
-  background-color: #eef4ff; 
-  color: #1a365d;
+  background-color: #f487de; 
+  color: #5d1a5d;
   font-size: 14px;
   line-height: 1.4;
 } 
@@ -155,7 +154,7 @@ section {
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  color: #fff;
+  color: #f5ffba;
   transition: opacity 0.2s;
 }
 
@@ -172,9 +171,9 @@ section {
 }
 
 footer { 
-  background-color: #3c7cf3; 
+  background-color: #ba33ad; 
   padding: 15px 25px; 
-  color: #fff; 
+  color: #f5ffba; 
   text-align: center;
   margin-top: 30px;
 }
