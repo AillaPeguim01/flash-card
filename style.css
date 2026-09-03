@@ -136,16 +136,19 @@ section {
 
 .cartao-imagem {
   width: 100%;
-  height: 150px; 
-  object-fit: contain;
+  height: 160px; /* Aumenta um pouco a altura da imagem */
+  object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+  border-radius: 8px;
 }
 
-.cartao-frente p {
-  padding: 10px 12px 0 12px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #222;
-  margin-top: auto;
+.cartao-frente {
+  background-color: #f8ff97;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 15px 12px;
+  gap: 12px;
 }
 
 /* Verso do Cartão */
@@ -202,4 +205,13 @@ footer {
   color: #f5ffba; 
   text-align: center;
   margin-top: 30px;
+}
+
+.cartao-frente p {
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  text-align: center;
+  margin: 0;
 }
