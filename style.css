@@ -67,12 +67,34 @@ section {
   justify-content: center;
   gap: 20px; 
   max-width: 1200px;
+  width: 100%;
 } 
+
+/* Seção de Título/Divisor entre as listas */
+.header-section {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.header-section h2 {
+  font-family: sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: #ba33ad;
+  width: 80%;       
+  margin: 0 auto; 
+}
 
 /* Dimensões do Cartão */
 .cartao {
   width: 280px;
-  height: 300px; /* Aumentado para dar mais espaço à foto e ao texto */
+  height: 300px;
   perspective: 1000px; 
   cursor: pointer;
 }
@@ -85,7 +107,6 @@ section {
   transform-style: preserve-3d; 
 } 
 
-/* Classe ativada via JS ao clicar no cartão */
 .cartao.virado .cartao-interno { 
   transform: rotateY(180deg); 
 } 
@@ -102,11 +123,11 @@ section {
   overflow: hidden; 
   display: flex;
   flex-direction: column;
-  background-color: #f8ff97; 
 } 
 
 /* Frente do Cartão */
 .cartao-frente {
+  background-color: #f8ff97;
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -116,7 +137,7 @@ section {
 .cartao-imagem {
   width: 100%;
   height: 150px; 
-  object-fit: contain; /* Exibe a imagem completa */
+  object-fit: contain;
 }
 
 .cartao-frente p {
@@ -124,7 +145,7 @@ section {
   font-size: 14px;
   font-weight: 500;
   color: #222;
-  margin-top: auto; /* Texto da pergunta para a parte inferior */
+  margin-top: auto;
 }
 
 /* Verso do Cartão */
@@ -132,15 +153,16 @@ section {
   transform: rotateY(180deg);
   padding: 20px 16px; 
   align-items: center;
+  justify-content: space-between;
   text-align: center; 
   background-color: #f487de; 
   color: #5d1a5d;
   font-size: 14px;
   line-height: 1.4;
-  
-  position: absolute;
-  display: flex;
-  flex-direction: column;
+}
+
+.cartao-verso p {
+  margin: auto 0;
 }
 
 /* Botões de Acertei/Errei */
@@ -149,6 +171,7 @@ section {
   gap: 10px;
   width: 100%;
   justify-content: center;
+  margin-top: auto;
 }
 
 .botoes-resposta button {
@@ -179,38 +202,4 @@ footer {
   color: #f5ffba; 
   text-align: center;
   margin-top: 30px;
-}
-
-.cartao-verso > p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  margin: 0;
-}
-
-.botoes-resposta {
-  position: absolute;
-  bottom: 25px;
-  left: 0;
-}
-
-.header-section {
-  text-align: center;
-  margin: 30px 0 20px 0;
-}
-
-.header-section h2 {
-  font-family: sans-serif;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.divider {
-  border: none;
-  height: 2px;
-  background-color: #cccccc;
-  width: 80%;              
-  margin: 0 auto 25px auto; 
 }
